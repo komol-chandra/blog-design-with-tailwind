@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Index Blog Post</title>
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/font-awesome-5.15.4-all.min.css">
     <script src="src/css/font-awesome-5.15.4.all.min.js"></script>
@@ -24,7 +24,7 @@
             <!-- logo img end -->
 
             <!-- links start  -->
-            <div class="ml-12 flex space-x-5">
+            <div class="ml-12 lg:flex space-x-5 hidden">
                 <a href="index.html" class="text-gray-700 text-sm font-semibold hover:text-primary transition">
                     <span class="mr-2">
                         <i class="fas fa-home"></i>
@@ -46,7 +46,7 @@
             </div>
             <!-- links end -->
             <!-- search box start  -->
-            <div class="relative ml-auto">
+            <div class="relative ml-auto hidden lg:block">
                 <span class="absolute left-3 top-2 text-sm text-gray-500">
                     <i class="fas fa-search"></i>
                 </span>
@@ -63,13 +63,20 @@
                 </a>
             </div>
             <!-- login button  end-->
+            <!-- menu start  -->
+            <div class="ml-4 xl:hidden block text-lg text-gray-700 hover:text-primary cursor-pointer transition"
+                id="open_sidebar">
+                <i class="fas fa-bars"></i>
+            </div>
+            <!-- menu end -->
         </div>
+
     </nav>
     <!-- navbar end  -->
-    <main class="py-12 bg-gray-100">
-        <div class="container mx-auto px-4 flex gap-4">
-            <!-- left part contant start -->
-            <div class="w-3/12">
+    <main class="py-12 bg-gray-100 min-h-screen">
+        <div class="container mx-auto px-4 flex flex-wrap lg:flex-nowrap gap-4">
+            <!-- left sidebar start -->
+            <div class="w-3/12 hidden xl:block">
                 <!-- Categories cart start  -->
                 <div class="bg-white shadow-sm rounded p-4">
                     <h3 class="text-xl font-semibold text-gray-700 font-roboto mb-2">Categories</h3>
@@ -128,7 +135,7 @@
                     </div>
                     <!-- Categories links end -->
                 </div>
-                <!-- Categories cart end  -->
+                <!-- random cart start  -->
                 <div class="bg-white shadow rounded p-4 mt-4 space-y-3">
                     <h3 class="text-xl font-semibold text-gray-700 font-roboto mb-2">Random Posts</h3>
                     <!-- single posts start  -->
@@ -209,26 +216,441 @@
                                         <i class="far fa-clock"></i>
                                     </span>
                                     june 11,2021
-
                                 </div>
                             </div>
                         </a>
                     </div>
                     <!-- single posts end-->
                 </div>
+                <!-- random cart start  -->
 
             </div>
-            <!-- left side contant end -->
-            <!-- mid part contant end -->
-            <div class="w-6/12 bg-red-900"></div>
-            <!-- mid part contant end -->
-            <!-- right part contant start -->
-            <div class="w-3/12 bg-black"></div>
-            <!-- right part contant start -->
+            <!-- left sidebar end -->
+            <!-- Main content -->
+            <div class="xl:w-6/12 lg:w-8/12 w-full space-y-4">
+                <!-- title bar  -->
+                <div class="bg-white shadow rounded p-4 items-center justify-between flex">
+                    <h2 class="text-gray-700 font-roboto font-semibold text-base">BUSINESS</h2>
+                    <a href="#"
+                        class="boreder border-blue-500 bg-blue-500 hover:bg-transparent transition text-white hover:text-blue-700 rounded-md p-2 text-sm font-roboto">SEE
+                        MORE</a>
+                </div>
+                <!-- big post  -->
+                <div class="bg-white shadow rounded p-4">
+                    <a href="post-view.html" class="block rounded-md overflow-hidden">
+                        <img src="src/img/img-12.jpg" alt="cover image"
+                            class="w-full rounded-md h-96 object-cover transform hover:scale-110 transition duration-500">
+                    </a>
+                    <h2 class="text-gray-700 font-bold font-poppins text-base mt-2 hover:text-primary transition">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias perferendis excepturi
+                        nesciunt iusto autem dolorem velit rem. Quae consectetur vero sint blanditiis, velit vel
+                        voluptatem? Eos est architecto iure! Ratione.
+                    </h2>
+                    <p class="text-sm text-gray-400 mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Veniam,
+                        libero! Commodi doloremque hic repudiandae beatae veritatis quas vitae perspiciatis cumque
+                        error, eveniet omnis, quos architecto voluptates laborum possimus totam recusandae?</p>
+                    <div class="flex gap-6 mt-2 ">
+                        <div class="flex items-center text-base text-gray-400">
+                            <span class="text-base mr-1">
+                                <i class="far fa-clock"></i>
+                            </span>
+                            Blogging Tripes
 
+                        </div>
+                        <div class="flex items-center text-base text-gray-400 ">
+                            <span class="text-base mr-1">
+                                <i class="far fa-clock"></i>
+                            </span>
+                            june 11,2021
+                        </div>
+                    </div>
+                </div>
+                <!-- regular posts  -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 md:gap-6 lg:gap-6">
+                    <!-- single posts  -->
+                    <div class="col-span-1">
+                        <div class="bg-white shadow rounded p-4">
+                            <a href="#" class="block rounded-md overflow-hidden">
+                                <img src="src/img/img-7.jpg" alt="cover image"
+                                    class="w-full rounded-md h-40 object-cover transform hover:scale-110 transition duration-500">
+                            </a>
+                            <h2
+                                class="text-gray-700 font-bold font-poppins text-base mt-2 hover:text-primary transition">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias perferendis
+                                excepturi
+                            </h2>
+
+                            <div class="xl:flex xl:gap-6 mt-2 flex flex-col">
+                                <div class="flex items-center text-sm text-gray-400">
+                                    <span class="text-xs mr-1">
+                                        <i class="far fa-clock"></i>
+                                    </span>
+                                    Blogging Tripes
+
+                                </div>
+                                <div class="flex items-center text-sm text-gray-400 ">
+                                    <span class="text-xs mr-1">
+                                        <i class="far fa-clock"></i>
+                                    </span>
+                                    june 11,2021
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single posts  -->
+                    <div class="col-span-1">
+                        <div class="bg-white shadow rounded p-4">
+                            <a href="#" class="block rounded-md overflow-hidden">
+                                <img src="src/img/img-8.jpg" alt="cover image"
+                                    class="w-full rounded-md h-40 object-cover transform hover:scale-110 transition duration-500">
+                            </a>
+                            <h2
+                                class="text-gray-700 font-bold font-poppins text-base mt-2 hover:text-primary transition">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias perferendis
+                                excepturi
+                            </h2>
+
+                            <div class="xl:flex xl:gap-6 mt-2 flex flex-col">
+                                <div class="flex items-center text-sm text-gray-400">
+                                    <span class="text-xs mr-1">
+                                        <i class="far fa-clock"></i>
+                                    </span>
+                                    Blogging Tripes
+
+                                </div>
+                                <div class="flex items-center text-sm text-gray-400 ">
+                                    <span class="text-xs mr-1">
+                                        <i class="far fa-clock"></i>
+                                    </span>
+                                    june 11,2021
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single posts  -->
+                    <div class="col-span-1">
+                        <div class="bg-white shadow rounded p-4">
+                            <a href="#" class="block rounded-md overflow-hidden">
+                                <img src="src/img/img-9.jpg" alt="cover image"
+                                    class="w-full rounded-md h-40 object-cover transform hover:scale-110 transition duration-500">
+                            </a>
+                            <h2
+                                class="text-gray-700 font-bold font-poppins text-base mt-2 hover:text-primary transition">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias perferendis
+                                excepturi
+                            </h2>
+
+                            <div class="xl:flex xl:gap-6 mt-2 flex flex-col">
+                                <div class="flex items-center text-sm text-gray-400">
+                                    <span class="text-xs mr-1">
+                                        <i class="far fa-clock"></i>
+                                    </span>
+                                    Blogging Tripes
+
+                                </div>
+                                <div class="flex items-center text-sm text-gray-400 ">
+                                    <span class="text-xs mr-1">
+                                        <i class="far fa-clock"></i>
+                                    </span>
+                                    june 11,2021
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single posts  -->
+                    <div class="col-span-1">
+                        <div class="bg-white shadow rounded p-4">
+                            <a href="#" class="block rounded-md overflow-hidden">
+                                <img src="src/img/img-10.jpg" alt="cover image"
+                                    class="w-full rounded-md h-40 object-cover transform hover:scale-110 transition duration-500">
+                            </a>
+                            <h2
+                                class="text-gray-700 font-bold font-poppins text-base mt-2 hover:text-primary transition">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias perferendis
+                                excepturi
+                            </h2>
+
+                            <div class="xl:flex xl:gap-6 mt-2 flex flex-col">
+                                <div class="flex items-center text-sm text-gray-400">
+                                    <span class="text-xs mr-1">
+                                        <i class="far fa-clock"></i>
+                                    </span>
+                                    Blogging Tripes
+
+                                </div>
+                                <div class="flex items-center text-sm text-gray-400 ">
+                                    <span class="text-xs mr-1">
+                                        <i class="far fa-clock"></i>
+                                    </span>
+                                    june 11,2021
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Main content -->
+            <!-- right sidebar -->
+            <div class="xl:w-3/12 lg:w-4/12 w-full">
+                <div class="bg-white shadow rounded p-4 space-y-3">
+                    <h3 class="text-xl font-semibold text-gray-700 font-roboto mb-2">Social Icons</h3>
+                    <div class="flex gap-2">
+                        <a href="#"
+                            class="border border-gray-400 text-base w-8 h-8 rounded-sm flex items-center justify-center ">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="border border-gray-400 text-base w-8 h-8 rounded-sm flex items-center justify-center ">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="border border-gray-400 text-base w-8 h-8 rounded-sm flex items-center justify-center ">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#"
+                            class="border border-gray-400 text-base w-8 h-8 rounded-sm flex items-center justify-center ">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#"
+                            class="border border-gray-400 text-base w-8 h-8 rounded-sm flex items-center justify-center ">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Popular cart start  -->
+                <div class="bg-white shadow rounded p-4 mt-4 space-y-3">
+                    <h3 class="text-xl font-semibold text-gray-700 font-roboto mb-2">Popular Posts</h3>
+                    <!-- single posts start  -->
+                    <div>
+                        <a href="#" class="flex group">
+                            <div class="flex-shrink-0">
+                                <img src="src/img/img-1.jpg" alt="post image" class="w-20 h-14 rounded object-cover">
+                            </div>
+                            <div class="flex-grow pl-3">
+                                <h4
+                                    class="text-md leading-5 text-gray-600 font-roboto font-semibold group-hover:text-primary transition">
+                                    Lorem ipsum dolor sit, amet consectetur</h4>
+                                <div class="flex items-center text-sm text-gray-400">
+                                    <span class="text-xs mr-1">
+                                        <i class="far fa-clock"></i>
+                                    </span>
+                                    june 11,2021
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- single posts end-->
+                    <!-- single posts start  -->
+                    <div>
+                        <a href="#" class="flex group">
+                            <div class="flex-shrink-0">
+                                <img src="src/img/img-2.jpg" alt="post image" class="w-20 h-14 rounded object-cover">
+                            </div>
+                            <div class="flex-grow pl-3">
+                                <h4
+                                    class="text-md leading-5 text-gray-600 font-roboto font-semibold group-hover:text-primary transition">
+                                    Lorem ipsum dolor sit, amet consectetur</h4>
+                                <div class="flex items-center text-sm text-gray-400">
+                                    <span class="text-xs mr-1">
+                                        <i class="far fa-clock"></i>
+                                    </span>
+                                    june 11,2021
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- single posts end-->
+                    <!-- single posts start  -->
+                    <div>
+                        <a href="#" class="flex group">
+                            <div class="flex-shrink-0">
+                                <img src="src/img/img-3.jpg" alt="post image" class="w-20 h-14 rounded object-cover">
+                            </div>
+                            <div class="flex-grow pl-3">
+                                <h4
+                                    class="text-md leading-5 text-gray-600 font-roboto font-semibold group-hover:text-primary transition">
+                                    Lorem ipsum dolor sit, amet consectetur</h4>
+                                <div class="flex items-center text-sm text-gray-400">
+                                    <span class="text-xs mr-1">
+                                        <i class="far fa-clock"></i>
+                                    </span>
+                                    june 11,2021
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- single posts end-->
+                    <!-- single posts start  -->
+                    <div>
+                        <a href="#" class="flex group">
+                            <div class="flex-shrink-0">
+                                <img src="src/img/img-1.jpg" alt="post image" class="w-20 h-14 rounded object-cover">
+                            </div>
+                            <div class="flex-grow pl-3">
+                                <h4
+                                    class="text-md leading-5 text-gray-600 font-roboto font-semibold group-hover:text-primary transition">
+                                    Lorem ipsum dolor sit, amet consectetur</h4>
+                                <div class="flex items-center text-sm text-gray-400">
+                                    <span class="text-xs mr-1">
+                                        <i class="far fa-clock"></i>
+                                    </span>
+                                    june 11,2021
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- single posts end-->
+                </div>
+                <!-- Popular cart start  -->
+                <!-- tags start  -->
+                <div class="bg-white shadow rounded p-4 space-y-3 mt-4">
+                    <h3 class="text-xl font-semibold text-gray-700 font-roboto mb-2">Tags</h3>
+                    <div class="flex gap-2 mt-2 items-center flex-wrap">
+                        <a href="#"
+                            class="border border-gray-200 text-gray-700 text-sm p-2 bg-transparent font-roboto hover:text-white hover:bg-blue-700 rounded">Web
+                            Design</a>
+                        <a href="#"
+                            class="border border-gray-200 text-gray-700 text-sm p-2 bg-transparent font-roboto hover:text-white hover:bg-blue-700 rounded">Web
+                            Design</a>
+                        <a href="#"
+                            class="border border-gray-200 text-gray-700 text-sm p-2 bg-transparent font-roboto hover:text-white hover:bg-blue-700 rounded">Web
+                            Design</a>
+                        <a href="#"
+                            class="border border-gray-200 text-gray-700 text-sm p-2 bg-transparent font-roboto hover:text-white hover:bg-blue-700 rounded">Web
+                            Design</a>
+                        <a href="#"
+                            class="border border-gray-200 text-gray-700 text-sm p-2 bg-transparent font-roboto hover:text-white hover:bg-blue-700 rounded">Web
+                            Design</a>
+                    </div>
+                </div>
+            </div>
+            <!-- right sidebar -->
         </div>
     </main>
+    <!-- footer -->
+    <footer class="border-t py-4">
+        <p class=" text-sm text-center">Copyright © 2021 <span class="font-semibold">komol</span>
+            All Rights Reserved</p>
+    </footer>
 
+    <!-- mobile sidebar start -->
+    <div class="fixed left-0 top-0 z-10 xl:hidden bg-black h-full w-full bg-opacity-25 opacity-0 invisible transition-all duration-500 "
+        id="sidebar_wrapper">
+        <div class="top-0 fixed h-full w-72 z-10 bg-white shadow-md flex flex-col px-4 space-y-4">
+            <!-- search box start  -->
+            <div class="relative mt-5 md:hidden">
+                <span class="absolute left-3 top-2 text-sm text-gray-500">
+                    <i class="fas fa-search"></i>
+                </span>
+                <input type="text" placeholder="Search..."
+                    class="block w-full border-none rounded-3xl pl-11 pr-2 py-2 focus:outline-none hover:border-primary bg-gray-200 text-sm text-gray-700 ">
+            </div>
+            <!-- search box end  -->
+            <!-- menu bar start  -->
+            <div class="flex flex-col space-y-4 md:hidden">
+                <a href="index.html" class="text-gray-700 text-sm font-semibold hover:text-primary transition">
+                    <span class="">
+                        <i class="fas fa-home"></i>
+                    </span>
+                    Home
+                </a>
+                <a href="#" class="text-gray-700 text-sm font-semibold hover:text-primary transition">
+                    <span class="">
+                        <i class="fas fa-file-alt"></i>
+                    </span>
+                    About
+                </a>
+                <a href="#" class="text-gray-700 text-sm font-semibold hover:text-primary transition">
+                    <span class="">
+                        <i class="fas fa-phone"></i>
+                    </span>
+                    Contact
+                </a>
+            </div>
+            <!-- menu bar end  -->
+            <h3 class="text-xl font-semibold text-gray-700 font-roboto">Categories</h3>
+
+            <!-- Categories links start -->
+            <div class="text-gray-700 space-y-2 items-center font-semibold">
+                <a href="#" class="flex  hover:text-primary">
+                    <span class="mr-2">
+                        <i class="far fa-folder-open"></i>
+                    </span>
+                    <span>Beauti</span>
+                    <span class="font-normal ml-auto">(12)</span>
+                </a>
+                <a href="#" class="flex  hover:text-primary">
+                    <span class="mr-2">
+                        <i class="far fa-folder-open"></i>
+                    </span>
+                    <span>Beauti</span>
+                    <span class="font-normal ml-auto">(12)</span>
+                </a>
+                <a href="#" class="flex  hover:text-primary">
+                    <span class="mr-2">
+                        <i class="far fa-folder-open"></i>
+                    </span>
+                    <span>Beauti</span>
+                    <span class="font-normal ml-auto">(12)</span>
+                </a>
+                <a href="#" class="flex  hover:text-primary">
+                    <span class="mr-2">
+                        <i class="far fa-folder-open"></i>
+                    </span>
+                    <span>Beauti</span>
+                    <span class="font-normal ml-auto">(12)</span>
+                </a>
+                <a href="#" class="flex  hover:text-primary">
+                    <span class="mr-2">
+                        <i class="far fa-folder-open"></i>
+                    </span>
+                    <span>Beauti</span>
+                    <span class="font-normal ml-auto">(12)</span>
+                </a>
+                <a href="#" class="flex  hover:text-primary">
+                    <span class="mr-2">
+                        <i class="far fa-folder-open"></i>
+                    </span>
+                    <span>Beauti</span>
+                    <span class="font-normal ml-auto">(12)</span>
+                </a>
+                <a href="#" class="flex  hover:text-primary">
+                    <span class="mr-2">
+                        <i class="far fa-folder-open"></i>
+                    </span>
+                    <span>Beauti</span>
+                    <span class="font-normal ml-auto">(12)</span>
+                </a>
+
+            </div>
+            <!-- Categories links end -->
+        </div>
+    </div>
+    <!-- mobile sidebar end -->
+
+    <script>
+        document.querySelector('#open_sidebar').addEventListener('click', function () {
+            document.querySelector('#sidebar_wrapper').classList.remove('opacity-0')
+            document.querySelector('#sidebar_wrapper').classList.remove('invisible')
+        })
+
+        document.body.addEventListener('click', function (e) {
+            if (e.target.id === 'sidebar_wrapper') {
+                // document.querySelector('#sidebar').classList.add('-left-80')
+                // document.querySelector('#sidebar').classList.remove('left-0')
+                document.querySelector('#sidebar_wrapper').classList.add('opacity-0')
+                document.querySelector('#sidebar_wrapper').classList.add('invisible')
+            }
+        })
+    </script>
 </body>
 
 </html>
